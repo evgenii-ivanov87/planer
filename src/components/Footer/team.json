@@ -1,0 +1,187 @@
+[
+  {
+    "id": "1",
+    "name": "Elena Tsemko",
+    "photo": "imagesTeam/Lena.jpg",
+    "linkedin": "https://www.linkedin.com/in/elena-tsemko/",
+    "github": "https://github.com/OlenaTsemko",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Team-lead",
+      "- Redux (state | operations | selectors)",
+      "- API requests logic in all components and pages",
+      "- Worked on pagination (logic)",
+      "- Routing",
+      "- Control styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Viktoriia Ksenofontova",
+    "photo": "imagesTeam/Viki.jpg",
+    "linkedin": "https://www.linkedin.com/in/viktoriia-ksenofontova",
+    "github": "https://github.com/Viktoriia-Ksenofontova",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Scrum master",
+      "- Created TasksPage adaptive for media queries (JSX, SCSS, logic)",
+      "- Filter",
+      "- Created components TaskItem, TaskList",
+      "- Worked on pagination (logic, styles)",
+      "- Control styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Artem Sergieiev",
+    "photo": "imagesTeam/Artem.jpg",
+    "linkedin": "https://www.linkedin.com/in/artem-sergieiev/",
+    "github": "https://github.com/ArtemS83",
+    "position": "Fullstack developer",
+    "doing": [
+      "Backend:",
+      "- Worked on backend schemas and the logic of the Project and Task, validation",
+      "- MongoDB",
+      "Frontend:",
+      "- Worked on API requests logic",
+      "- Worked on the diagram (logic)",
+      "- Control styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Alex Deviatov",
+    "photo": "imagesTeam/Alex.jpg",
+    "linkedin": "https://www.linkedin.com/in/alex-deviatov/",
+    "github": "https://github.com/lewyk",
+    "position": "Fullstack developer",
+    "doing": [
+      "Backend:",
+      "- Worked on backend schemas and the logic of the Sprint and Task, validation",
+      "Frontend:",
+      "- Routing",
+      "- Worked on the diagram (logic)",
+      "- Control & fix styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Yevheniia Petrychenko",
+    "photo": "imagesTeam/Evgeniia.jpg",
+    "linkedin": "https://www.linkedin.com/in/yevheniia-petrychenko-955483216/",
+    "github": "https://github.com/yevheniia-petrychenko ",
+    "position": "Fullstack developer",
+    "doing": [
+      "Backend:",
+      "- Created backend user component (scheme and the logic)",
+      "- Worked on tasks component",
+      "- Created swagger UI interface",
+      "- Google authorization",
+      "- Planning",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Ihor Prokopets",
+    "photo": "imagesTeam/Ihor.jpg",
+    "linkedin": "https://www.linkedin.com/in/ihor-prokopets-652561208",
+    "github": "https://github.com/Xoyk23",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Created ProjectsPage",
+      "- Created components AppBar, UserMenu",
+      "- Private and publick routes components | routing",
+      "- Confirmation of delete",
+      "- Control & fix styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Yevheniia Suska",
+    "photo": "imagesTeam/Evgeniia_.jpg",
+    "linkedin": "https://www.linkedin.com/in/suska/",
+    "github": "https://github.com/Yevheniia30",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Сreated tasks performance diagram",
+      "- Created components",
+      "- Form for adding participants, form for creating tasks",
+      "- Loader(spinner)",
+      "- Control & fix styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "8",
+    "name": "Vadim Vatrya",
+    "photo": "imagesTeam/Vadim.jpg",
+    "linkedin": "https://www.linkedin.com/in/vadim-vatrya-4858b2204/",
+    "github": "https://github.com/Vadim-Vatrya",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Created markup and styles for registration page",
+      "- Created markup and styles for login page",
+      "- Control & fix styles",
+      "- Control & fix bugs"
+    ]
+  },
+  {
+    "id": "9",
+    "name": "Olga Tomilko",
+    "photo": "imagesTeam/Olga.jpg",
+    "linkedin": "https://www.linkedin.com/in/olga-tomilko",
+    "github": "https://github.com/OlgaTomilko",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Created components ProjectList, ProjectItem, SprintList",
+      "- Created markup and styles for FooterModal (JSX, SCSS modules, logic)",
+      "- Control & fix styles "
+    ]
+  },
+  {
+    "id": "10",
+    "name": "Nataliia Prykhodko",
+    "photo": "imagesTeam/Nataliia.JPG",
+    "linkedin": "https://www.linkedin.com/in/nataliia-prykhodko-b829b5214/",
+    "github": "https://github.com/Nataliia333",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Created markup and styles for sprintItem adaptive for media queries",
+      "- Created markup and styles for Footer (JSX, SCSS modules)",
+      "- Control & fix styles"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "Myroslava Nikolaenko",
+    "photo": "imagesTeam/Mira.jpg",
+    "linkedin": "https://www.linkedin.com/in/myroslava-nikolaienko-3686b3211/",
+    "github": "https://github.com/Mira1702",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Created component CreateProject adaptive for media queries (JSX, SCSS modules, logic)",
+      "- Created Project Presentation"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "Serhii Stanislav",
+    "photo": "imagesTeam/Serhii.jpg",
+    "linkedin": "https://www.linkedin.com/in/serhiistanislav",
+    "github": "https://github.com/itstoreall",
+    "position": "Fullstack developer",
+    "doing": [
+      "- Сreated a SprintsPage adaptive for media queries (JSX, SCSS modules, logic)",
+      "- Created Modal component, CreateSprint component",
+      "- Styles for background with circles for the Login page",
+      "- Control & fix styles",
+      "- Control & fix bugs"
+    ]
+  }
+]

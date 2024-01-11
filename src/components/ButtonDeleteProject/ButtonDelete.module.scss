@@ -1,0 +1,26 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+.btnDelete {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 30px;
+  background: url(./delete.svg);
+  background-position: right 50% bottom 62%;
+  background-size: 250%;
+  transition: all 0.5s linear;
+  &:hover,
+  &:focus {
+    transform: rotateZ(75deg);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .btnDelete {
+    width: 34px;
+    height: 34px;
+  }
+}

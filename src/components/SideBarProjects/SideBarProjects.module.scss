@@ -1,0 +1,122 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+.SideBarProjectsList {
+  @media screen and (min-width: $tablet) {
+    padding: 10px 0 20px 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 0 20px 55px;
+  }
+
+  .SideBarProjectsItem {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    // Colors and Shadows --------------
+    &:nth-child(3n + 1) {
+      .projectLink .square {
+        background-color: $project-purple;
+      }
+      .activeProjectLink .square {
+        box-shadow: 0px 6px 26px 0px rgba(140, 114, 223, 0.4);
+      }
+      .projectLink:hover,
+      .projectLink:focus {
+        .square {
+          box-shadow: 0px 6px 26px 0px rgba(140, 114, 223, 0.4);
+        }
+      }
+    }
+
+    &:nth-child(3n + 2) {
+      .projectLink .square {
+        background-color: $project-rose;
+      }
+      .activeProjectLink .square {
+        box-shadow: 0px 6px 26px 0px rgba(255, 118, 95, 0.4);
+      }
+      .projectLink:hover,
+      .projectLink:focus {
+        .square {
+          box-shadow: 0px 6px 26px 0px rgba(255, 118, 95, 0.4);
+        }
+      }
+    }
+
+    &:nth-child(3n) {
+      .projectLink .square {
+        background-color: $project-green;
+      }
+      .activeProjectLink .square {
+        box-shadow: 0px 6px 26px 0px rgba(113, 223, 135, 0.4);
+      }
+      .projectLink:hover,
+      .projectLink:focus {
+        .square {
+          box-shadow: 0px 6px 26px 0px rgba(113, 223, 135, 0.4);
+        }
+      }
+    } // ----------- End Colors and Shadows
+
+    & > .projectLink {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 54px;
+      color: #181c27;
+      &:hover,
+      &:focus {
+        .projectName {
+          font-weight: 700;
+        }
+      }
+
+      @media screen and (min-width: $tablet) {
+        width: 177px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        width: 162px;
+      }
+
+      .square {
+        display: block;
+        margin-right: 15px;
+        width: 36px;
+        height: 36px;
+        border-radius: 5px;
+      }
+
+      & > .projectName {
+        max-width: 118px;
+        max-width: 110px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.04em;
+        text-align: start;
+        color: #181c27;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        @media screen and (min-width: $desktop) {
+          max-width: 110px;
+        }
+      }
+    }
+
+    // Active Link
+    .activeProjectLink {
+      .projectName {
+        font-weight: 700;
+      }
+    }
+  }
+}

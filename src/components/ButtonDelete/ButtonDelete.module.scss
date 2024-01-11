@@ -1,0 +1,19 @@
+@import '../../scss/vars';
+
+.btnDelete {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  background: center url(./deleteIcon.svg) no-repeat;
+  background-color: #a6a6a6;
+  background-size: 70%;
+  transition: all 0.5s linear;
+  &:hover,
+  &:focus {
+    background-color: $main-orange;
+    transform: rotateZ(75deg);
+  }
+}

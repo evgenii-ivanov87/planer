@@ -1,0 +1,448 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: $mobile-max) {
+    min-height: calc(100vh - 61px);
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    padding: 0 40px 0 0;
+    width: $tablet;
+    min-height: 600px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+    padding: 0 55px 0 0;
+  }
+
+  // Sidebar
+  .aside {
+    position: relative;
+    padding: 0 0 0 0;
+    @media screen and (max-width: $mobile-max) {
+      border-bottom: 1px solid rgba(24, 28, 39, 0.1);
+      min-width: 100%;
+    }
+
+    @media screen and (min-width: $tablet) {
+      border-right: 1px solid rgba(24, 28, 39, 0.1);
+      min-height: calc(100vh - 81px);
+      width: 256px;
+      text-align: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 255px;
+    }
+  }
+}
+
+.sideBarSprintsList {
+  @media screen and (min-width: $tablet) {
+    padding: 10px 0 20px 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 10px 0 20px 55px;
+  }
+
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+.sideBarItem {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 177px;
+  }
+}
+.sprintsWrap {
+  display: flex;
+  align-items: center;
+}
+
+.linkToSprint {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  color: #181c27;
+  font-size: 14px;
+  text-align: left;
+
+  @media screen and (min-width: $desktop) {
+    width: 162px;
+  }
+  span {
+    display: block;
+    margin-right: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    background: $form-background;
+  }
+
+  h3 {
+    font-weight: 400;
+    max-height: 60px;
+    max-width: 118px;
+    // добавить троеточие в конце длинных названий
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @media screen and (min-width: $desktop) {
+      max-width: 110px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    span {
+      box-shadow: 0px 6px 26px 0px rgba(0, 5, 97, 0.15);
+    }
+    h3 {
+      font-weight: bold;
+      text-overflow: clip;
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+}
+
+.linkToSprintActive {
+  h3 {
+    font-weight: bold;
+  }
+  span {
+    box-shadow: 0px 6px 26px 0px rgba(0, 5, 97, 0.2);
+  }
+}
+
+// Content
+.sprintContent {
+  position: relative;
+  @media screen and (max-width: $mobile-max) {
+    max-width: 414px;
+    padding: 0 20px 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-top: 20px;
+    width: 512px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 1026px;
+  }
+}
+
+.sprintDate {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: rgba(24, 28, 39, 0.6);
+  @media screen and (max-width: $mobile-max) {
+    justify-content: space-between;
+    padding-top: 10px;
+    height: 70px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-left: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+}
+
+.pagination {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.btnBefore,
+.btnNext {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 26px;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:focus:enabled,
+  &:hover:enabled {
+    outline: none;
+    transform: scale(1.3);
+  }
+}
+.paginationItem {
+  display: flex;
+  @media screen and (max-width: $mobile-max) {
+    justify-content: space-between;
+  }
+}
+
+.currentDay {
+  padding: 5px 5px 0 10px;
+  font-size: 18px;
+  color: #181c27;
+}
+.totalDay,
+.calendarDay {
+  padding: 10px 10px 5px 5px;
+  font-size: 12px;
+  color: rgba(24, 28, 39, 0.6);
+}
+
+.titleDisable {
+  display: none;
+}
+.title {
+  position: relative;
+  transition: all 0.2s linear;
+  color: $text-dark;
+  letter-spacing: 0.04em;
+  font-family: $main-font;
+  font-weight: 500;
+  line-height: 1.22;
+  // добавить троеточие в конце длинных названий
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  @media screen and (max-width: $mobile-max) {
+    width: 260px;
+    height: 64px;
+    font-size: 26px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 330px;
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 88px;
+    font-size: 36px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 40px;
+    margin-left: 70px;
+    height: 85px;
+  }
+}
+
+// Форма для изменения заголовка
+.changeTitleForm {
+  display: none;
+}
+.changeTitleFormActive {
+  display: flex;
+  align-items: center;
+}
+
+.inputChangeTitle {
+  display: inline-block;
+  border: none;
+  outline: none;
+  box-shadow: 2px 4px 8px rgba(0, 5, 97, 0.1);
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+  @media screen and (max-width: $mobile-max) {
+    width: 260px;
+    height: 64px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 334px;
+    height: 88px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 40px;
+    margin-left: 70px;
+    height: 75px;
+  }
+}
+
+.btnSaveChange {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  width: 25px;
+  height: 25px;
+  background: center url(./svg/saver.svg) no-repeat;
+  background-size: 18px;
+  &:hover,
+  &:focus {
+    background: center url(./svg/saverActive.svg) no-repeat;
+    background-size: 18px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin: 10px 34px 0 0;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 230px;
+  }
+}
+
+.sprintHeader {
+  display: flex;
+  @media screen and (max-width: $tablet-max) {
+    align-items: flex-start;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 30px;
+    align-items: baseline;
+  }
+}
+
+.btnChangeDisable {
+  display: none;
+}
+.btnChange {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-color: #a6a6a6;
+  background: url(./svg/btnChange.svg) no-repeat;
+  transition: all 0.25s linear;
+  &:hover,
+  &:focus {
+    background: url(./svg/btnChangeActive.svg) no-repeat;
+    transform: scale(1.2);
+  }
+  @media screen and (max-width: $mobile-max) {
+    margin: 0 0 0 30px;
+  }
+  @media screen and (min-width: $tablet) {
+    margin: 10px 34px 0 0;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 230px;
+  }
+}
+
+.btnCreateTask {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  background: url(./svg/plus.svg) no-repeat;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+    transform: scale(1.15);
+  }
+  @media screen and (max-width: $mobile-max) {
+    z-index: 1;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+  }
+  @media screen and (min-width: $desktop) {
+    &::after {
+      content: 'Create a task';
+      position: absolute;
+      width: 185px;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.04em;
+      left: 20px;
+      top: 10px;
+    }
+  }
+}
+.createNewSprintWrap {
+  bottom: 0;
+  width: 100%;
+  padding: 0 0 30px;
+  text-align: center;
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.btnCreateSprint {
+  display: block;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: url(./svg/plus.svg) no-repeat;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+    transform: scale(1.15);
+  }
+}
+.btnOpenAnalytics {
+  cursor: pointer;
+  z-index: 1;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: center url(./svg/analytics.svg) no-repeat;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:focus,
+  &:hover {
+    outline: none;
+    box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+    transform: scale(1.15);
+  }
+  @media screen and (min-width: $tablet) {
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+  }
+  @media screen and (max-width: $mobile-max) {
+    position: fixed;
+    bottom: 60px;
+    left: 10px;
+  }
+}
+
+.swalButton {
+  background-color: $main-orange;
+  box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+  transition: all 300ms ease;
+  padding: 11px 44px;
+  border: none;
+  border-radius: 25px;
+  font-size: 12px;
+  outline: none;
+  &:hover {
+    color: $main-orange;
+    font-weight: 800;
+    box-shadow: 0px 4px 10px 4px rgba(255, 107, 8, 0.3);
+    outline: none;
+  }
+}

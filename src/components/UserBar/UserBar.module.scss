@@ -1,0 +1,137 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+.Cont {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.User {
+  font-family: $main-font;
+  font-style: normal;
+
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+.Exit {
+  fill: currentColor;
+}
+
+.Button {
+  padding: 6px 4px 6px 8px;
+  border: transparent;
+  font-family: $main-font;
+  color: $text-light;
+  cursor: pointer;
+}
+
+// ======================Modile===================
+
+@media screen and (max-width: $mobile-max) {
+  .User {
+    margin: 0 10px 0 10px;
+    font-size: 14px;
+  }
+
+  .Button {
+    background-color: #a6a6a6;
+    border-radius: 50%;
+    font-size: 0px;
+
+    color: #ffffff;
+    &:hover {
+      background-color: $form-input-error;
+    }
+
+    &:focus {
+      background-color: $form-input-error; //цвет ховер и фокуса обсуждаем
+    }
+  }
+}
+
+@media screen and (max-width: $mobilePlus) {
+  .User {
+    font-size: 12px;
+  }
+}
+
+//============Tablet==========================================
+
+@media screen and (min-width: $tablet) {
+  .User {
+    margin-right: 77px;
+    font-size: 14px;
+  }
+
+  .Exit {
+    margin-right: 10px;
+  }
+
+  .Button {
+    padding: 0;
+    display: flex;
+    background-color: transparent;
+    color: $text-light;
+
+    font-size: 14px;
+    font-weight: 400;
+    &:hover {
+      color: $form-input-error;
+    }
+
+    &:focus {
+      color: $form-input-error;
+    }
+  }
+}
+
+//============================Desktop===============================
+
+@media screen and (min-width: $desktop) {
+  .User {
+    margin-right: 77px;
+    font-size: 14px;
+  }
+
+  .Exit {
+    margin-right: 10px;
+  }
+
+  .Button {
+    padding: 0;
+    display: flex;
+    background-color: transparent;
+
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      color: $form-input-error;
+    }
+
+    &:focus {
+      color: $form-input-error;
+    }
+  }
+}
+
+.swalButton {
+  background-color: $main-orange;
+  box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+  transition: all 300ms ease;
+  padding: 11px 44px;
+  border: none;
+  border-radius: 25px;
+  font-size: 12px;
+  outline: none;
+  &:hover {
+    color: $main-orange;
+    font-weight: 800;
+    box-shadow: 0px 4px 10px 4px rgba(255, 107, 8, 0.3);
+    outline: none;
+  }
+}

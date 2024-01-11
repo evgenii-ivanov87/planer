@@ -1,0 +1,124 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+@keyframes showModalBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showModalSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showModalSlideMob {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateCloseBtn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  background-color: $primaryWhiteColor;
+  z-index: 2;
+
+  @media screen and (max-width: $mobile-max) {
+    top: 61px;
+    z-index: 3;
+  }
+
+  @media screen and (min-width: $tablet) {
+    top: 0;
+    height: 100vh;
+    background-color: $modalBg;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    height: 100%;
+    background-color: $main-background;
+    overflow-y: scroll;
+
+    // Hides Modal scrollbar
+    -ms-overflow-style: none; // IE and Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari,Opera
+    }
+
+    @media screen and (max-width: $mobile-max) {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-left: auto;
+      margin-right: auto;
+      width: 670px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 1170px;
+      box-shadow: $primaryShadow;
+      transition: all 250ms linear;
+      transform: scale(1);
+    }
+
+    .CloseModalBtn {
+      position: absolute;
+      top: 0;
+      padding: 9px;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      &:hover {
+        animation: rotateCloseBtn 600ms forwards;
+      }
+
+      @media screen and (max-width: $mobile-max) {
+        margin-left: 290px;
+      }
+
+      @media screen and (min-width: $tablet) {
+        margin-left: 640px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        right: 0;
+      }
+    }
+  }
+}

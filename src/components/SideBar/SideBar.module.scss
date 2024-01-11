@@ -1,0 +1,14 @@
+@import '../../scss/breakpoints';
+
+.SideBar {
+  @media screen and (min-width: $tablet) {
+    padding: 0 0 0 0;
+    width: 229px;
+    height: 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 0 0 0;
+    width: 225px;
+  }
+}

@@ -1,0 +1,148 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+.Container {
+  @media screen and (min-width: $tablet) {
+    min-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $desktop;
+  }
+}
+
+.ProjectsHeaderBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProjectsUtilDiv {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.21;
+}
+
+.ProjectsList {
+  display: flex;
+}
+
+.ProjectsCreateButton {
+  width: 44px;
+  height: 44px;
+
+  margin-right: 20px;
+
+  background: $main-orange;
+  border-radius: 25px;
+  background-image: url(./images/PlusButton.svg);
+  border: none;
+  cursor: pointer;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    outline: none;
+    box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+    transform: scale(1.15);
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+    transform: scale(1.15);
+  }
+}
+
+.ProjectsTitle {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+}
+
+// ======================Modile===================
+@media screen and (max-width: $mobile-max) {
+  .ProjectsHeaderBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 0px 20px;
+    position: relative;
+  }
+
+  .ProjectsUtilDiv {
+    font-size: 0px;
+  }
+
+  .ProjectsCreateButton {
+    position: fixed;
+
+    bottom: 6%;
+    right: 3%;
+    margin: 0px;
+    z-index: 99;
+  }
+
+  .ProjectsTitle {
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.21;
+  }
+}
+
+//============Tablet==========================================
+
+@media screen and (min-width: $tablet) {
+  .ProjectsHeaderBar {
+    padding: 40px 40px 0px 47px;
+  }
+
+  .ProjectsUtilDiv {
+    font-size: 0px;
+  }
+
+  .ProjectsTitle {
+    font-size: 36px;
+    line-height: 1.21;
+  }
+}
+
+//============================Desktop===============================
+
+@media screen and (min-width: $desktop) {
+  .ProjectsHeaderBar {
+    padding: 40px 86px 0px 62px;
+  }
+
+  .ProjectsCreateButton {
+    margin-right: 20px;
+  }
+
+  .ProjectsTitle {
+    font-size: 36px;
+    line-height: 1.21;
+  }
+}
+
+.swalButton {
+  background-color: $main-orange;
+  box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+  transition: all 300ms ease;
+  padding: 11px 44px;
+  border: none;
+  border-radius: 25px;
+  font-size: 12px;
+  outline: none;
+  &:hover {
+    color: $main-orange;
+    font-weight: 800;
+    box-shadow: 0px 4px 10px 4px rgba(255, 107, 8, 0.3);
+    outline: none;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../scss/breakpoints';
+
+.SideBarScrollWrap {
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 12vh;
+    height: 45vh;
+    min-height: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: #edeef3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #ff6b08;
+      border-radius: 1.5px;
+    }
+  }
+}

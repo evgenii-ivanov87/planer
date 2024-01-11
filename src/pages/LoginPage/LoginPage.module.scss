@@ -1,0 +1,318 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+@import '../../scss/base';
+
+.backgroundMain {
+  // Circles --------------------------------
+  .circlesWrap {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 81px);
+    z-index: -1;
+    overflow: hidden;
+
+    // Tablet Circles
+    .tabletCircles {
+      display: flex;
+      width: 100%;
+      height: calc(100vh - 81px);
+
+      .tabletLeftSide {
+        padding-top: 170px;
+        width: 50%;
+      }
+
+      .tabletRightSide {
+        padding-top: 33px;
+        width: 50%;
+
+        .tabletRightCircles {
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
+
+    // Desk Circles
+    .deskCircles {
+      display: flex;
+      width: 100%;
+      height: calc(100vh - 81px);
+
+      .deskLeftSide {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 111px;
+        width: 50%;
+      }
+
+      .deskRightSide {
+        padding-top: 23px;
+        width: 50%;
+
+        .rightCircles {
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
+  } // End Circles --------------------------
+
+  // Form
+  .formWrap {
+    @media screen and (max-width: $mobile-max) {
+      height: calc(100vh - 61px);
+      background-color: $form-reg-background;
+    }
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 81px);
+      min-height: 510px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-height: 470px;
+    }
+
+    // Single Circle ------------------------
+    .circleWrap {
+      position: absolute;
+      top: 81px;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+
+      .deskCircles {
+        display: flex;
+        width: 100%;
+        height: calc(100vh - 81px);
+
+        .deskLeftSide {
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          width: 40%;
+
+          .DeskLeftCircle {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 184px;
+            // z-index: 2;
+          }
+        }
+      }
+    } // End Single Circle ------------------
+
+    .form {
+      padding: 50px 20px;
+      margin: 0 auto;
+      background-color: $form-reg-background;
+
+      @media screen and (max-width: $mobile-max) {
+        max-width: 414px;
+      }
+
+      @media screen and (min-width: $tablet) {
+        padding: 40px 40px;
+        margin: 0 0 100px;
+        width: 500px;
+        height: 430px;
+        border-radius: 5px;
+        box-shadow: 0px 6px 26px rgba(0, 5, 97, 0.1);
+      }
+
+      @media screen and (min-width: $desktop) {
+        margin: 0 0 60px;
+      }
+
+      .title {
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 26px;
+        letter-spacing: 0.04em;
+
+        @media screen and (min-width: $tablet) {
+          margin-bottom: 45px;
+          font-size: 36px;
+        }
+      }
+
+      // Below unchanged ---------------------------
+      .labelForm {
+        font-family: $main-font;
+        position: relative;
+        display: block;
+        margin-bottom: 30px;
+        font-weight: 600;
+        color: $text-light;
+      }
+
+      .nameInput {
+        position: absolute;
+        left: 5px;
+        transform: translateY(9px);
+        transition: transform 250ms linear;
+        font-weight: normal;
+      }
+
+      .labelForm:focus-within > .nameInput {
+        transform: translateY(-18px);
+        font-size: 12px;
+      }
+
+      .inputForm {
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        border-style: none;
+        border-bottom: 1px solid $text-light;
+        background: $form-reg-background;
+      }
+
+      .inputForm:invalid {
+        margin-bottom: 5px;
+        color: $form-input-error;
+        border-bottom: 1px solid $form-input-border;
+      }
+
+      .inputForm:focus {
+        border-color: #441e04;
+        box-shadow: 0px 3px 4px $form-input-error;
+      }
+
+      .inputForm:not(:placeholder-shown) + .nameInput {
+        transform: translateY(-8px);
+        font-size: 12px;
+      }
+
+      .error {
+        padding-left: 8px;
+        font-weight: 400;
+        font-size: 12px;
+      }
+
+      .error1 {
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 1, 22;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.04em;
+        color: $form-input-error;
+        // transform: translateY(-32px);
+      }
+
+      .login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.25;
+      }
+
+      .auth {
+        padding-left: 5px;
+        text-decoration: underline;
+        color: $text-light;
+      }
+
+      .auth:visited {
+        color: $text-light;
+      }
+
+      .btnLog {
+        display: flex;
+        flex-direction: row;
+        padding: 11px 44px;
+        cursor: pointer;
+        margin: 0 auto 20px;
+        width: 141px;
+        height: 44px;
+        text-align: center;
+        vertical-align: middle;
+        color: $text-white;
+        background-color: rgba(255, 107, 8, 0.3);
+        border: none;
+        border-radius: 25px;
+        display: flex;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        text-align: center;
+        letter-spacing: 0.04em;
+        transition: all 0.25s linear;
+      }
+
+      .btnLog:enabled {
+        background-color: $main-orange;
+        box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+        transition: all 300ms ease;
+      }
+
+      .btnLog:enabled:hover {
+        color: $main-orange;
+        font-weight: 800;
+        background-color: $text-white;
+        box-shadow: 0px 4px 10px 4px rgba(255, 107, 8, 0.3);
+      }
+
+      .question {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.22;
+        letter-spacing: 0.04em;
+        color: $text-light;
+      }
+
+      @media screen and (min-width: $mobile) {
+        .nameInput {
+          font-size: 16px;
+        }
+
+        .input {
+          font-size: 16px;
+        }
+      }
+
+      @media screen and (min-width: $tablet) {
+        .nameInput {
+          font-size: 18px;
+        }
+
+        .input {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.swalButton {
+  background-color: $main-orange;
+  box-shadow: 0px 3px 4px rgba(255, 107, 8, 0.3);
+  transition: all 300ms ease;
+  padding: 11px 44px;
+  border: none;
+  border-radius: 25px;
+  font-size: 12px;
+  outline: none;
+  &:hover {
+    color: $main-orange;
+    font-weight: 800;
+    box-shadow: 0px 4px 10px 4px rgba(255, 107, 8, 0.3);
+    outline: none;
+  }
+}

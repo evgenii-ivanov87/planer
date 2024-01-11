@@ -1,0 +1,71 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+.Header {
+  display: flex;
+  align-items: center;
+
+  background-color: $main-background;
+
+  border-bottom: $main-border;
+}
+
+// Fixes a Header on a mobile device
+header {
+  @media screen and (max-width: $mobile-max) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+.Logo {
+  //   padding-left: 20px;
+  width: 100px;
+  height: 30px;
+  // margin: 0px 51px 0px 20px;
+  margin-right: auto;
+}
+
+// ======================Mobile===================
+@media screen and (max-width: $mobile-max) {
+  .Header {
+    padding: 15px 20px;
+  }
+
+  .Logo {
+    width: 100px;
+    height: 30px;
+    // margin: 0px 51px 0px 20px;
+  }
+}
+
+//============Tablet==========================================
+
+@media screen and (min-width: $tablet) {
+  .Header {
+    padding: 19px 40px;
+  }
+
+  .Logo {
+    width: 140px;
+    height: 42px;
+    // margin: 0px 303px 0px 40px;
+  }
+}
+
+//============================Desktop===============================
+
+@media screen and (min-width: $desktop) {
+  .Header {
+    padding: 19px 55px;
+  }
+
+  .Logo {
+    width: 140px;
+    height: 42px;
+    // margin: 0px 785px 0px 55px;
+  }
+}

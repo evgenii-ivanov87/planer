@@ -1,0 +1,112 @@
+@import '../../scss/vars';
+@import '../../scss/breakpoints';
+
+.taskListHeadContainer {
+  display: flex;
+  border-bottom: 1px solid rgba(24, 28, 39, 0.1);
+  margin-bottom: 20px;
+  width: 100%;
+  @media screen and (max-width: $tablet-max) {
+    padding: 10px 0px 0px 20px;
+    margin: 0 0 20px 0;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 10px 10px 10px 100px;
+  }
+}
+.searchForm {
+  display: flex;
+}
+.findInput {
+  display: none;
+}
+
+.findInputActive {
+  display: inline-block;
+  width: 80px;
+  height: 16px;
+  border: none;
+  box-shadow: 2px 4px 8px rgba(0, 5, 97, 0.1);
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 2px 0 2px 5px;
+  margin: 0 10px 0 0;
+  outline: none;
+  @media screen and (max-width: $mobile-max) {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 240px;
+    height: 40px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    height: 20px;
+    width: 160px;
+  }
+}
+
+.buttonFind {
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  width: 25px;
+  height: 25px;
+  background: center url(./svg/searchIcon.svg) no-repeat;
+  background-size: 20px;
+  transition: all 0.25s linear;
+  &:hover,
+  &:focus {
+    background: center url(./svg/searchActive.svg) no-repeat;
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: $tablet-max) {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+  @media screen and (max-width: $mobile-max) {
+    position: absolute;
+    top: 45px;
+    left: 20px;
+  }
+}
+
+.taskListHead {
+  @media screen and (max-width: $tablet-max) {
+    display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.taskListHeadItem {
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.04em;
+  @media screen and (min-width: $desktop) {
+    width: 100px;
+    height: 34px;
+    margin-right: 93px;
+  }
+}
+.taskList {
+  @media screen and (max-width: $mobile-max) {
+    display: block;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 0 0 20px 0;
+    margin-left: 70px;
+  }
+}
